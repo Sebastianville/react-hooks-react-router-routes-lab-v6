@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import NavBar from "../components/NavBar";
 
 function Movie() {
   const {id} = useParams();
 const [movieData, setMovieData] = useState({genres:[]});
- 
-console.log(useParams())
+
 
   useEffect (() => {
     fetch(`http://localhost:4000/movies/${id}`)
@@ -15,6 +15,9 @@ console.log(useParams())
  
   return (
     <div>
+       <header>
+        <NavBar />
+      </header>
       <h1>
         {movieData.title}
       </h1>

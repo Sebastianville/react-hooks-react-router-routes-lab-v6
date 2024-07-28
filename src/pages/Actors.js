@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import NavBar from "../components/NavBar";
 
 function Actors() {
   const [actors, setActors] = useState([]);
@@ -15,6 +16,9 @@ function Actors() {
 
   return (
     <>
+    <header>
+        <NavBar />
+      </header>
       <main>
       <h1>Actors Page</h1>
     {

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import NavBar from "../components/NavBar";
 
 function Directors() {
  const [directors, SetDirectors] = useState ([]);
@@ -12,6 +13,9 @@ fetch('http://localhost:4000/directors')
 
   return (
     <div>
+      <header>
+        <NavBar />
+      </header>
       <h1>Directors Page</h1>
       {directors.map((curDirector) => (
         <article key={curDirector.id}>
