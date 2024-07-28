@@ -13,7 +13,7 @@ function MovieCard({ movie }) {
     <article>
         <h2>{title}</h2>
         <p>Time: {time} minutes</p>
-        <p> {genres.join(',')}</p>
+        <p> Genres: {genres.join(', ')}</p>
           <Link to={`/Movie/${id}`}> View info
           </Link>
           
