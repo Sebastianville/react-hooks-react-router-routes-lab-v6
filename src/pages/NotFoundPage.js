@@ -1,11 +1,16 @@
 import {Link} from 'react-router-dom'
+import NavBar from "../components/NavBar";
 
 function NotFoundPage (){
     return (
-        <div>
-            404 not found
-            <Link to="/"> Home from link </Link>
-        </div>
+        <>
+        <header>
+            <NavBar />
+        </header>
+        <main>
+            <h1>Oops! Looks like something went wrong.</h1>
+        </main>
+        </>
     );
 }
 export default NotFoundPage;
